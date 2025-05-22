@@ -1,62 +1,232 @@
-.menu {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Add these styles to your existing Work.css file */
+
+.WorkTitle {
+  font-family: Calibri;
+  font-size: 60px;
+  text-align: center;
+  margin: 20px 0;
+  color: white;
+}
+
+.work-container {
+  display: flex;
+  width: 100vw;
+  height: calc(100vh - 140px); /* Adjust for title height */
+  min-height: 600px;
+}
+
+/* Left Side - Input Section */
+.input-section {
+  width: 50%;
+  padding: 40px;
+  background-color: #f5f5f5;
+  border-right: 4px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.input-group {
+  margin-bottom: 40px;
+  flex-grow: 1;
+}
+
+.input-label {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.text-input {
+  width: 100%;
+  height: 300px;
+  padding: 20px;
+  font-size: 18px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  resize: none;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+.copy-button {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.copy-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Right Side - Output Section */
+.output-section {
+  width: 50%;
+  padding: 40px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-container {
+  margin-bottom: 30px;
+}
+
+.tab-navigation {
+  display: flex;
+  background-color: #e9ecef;
+  border-radius: 15px;
+  padding: 5px;
+  gap: 5px;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 15px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  color: #666;
+}
+
+.tab-button.active {
+  background-color: white;
+  color: #007bff;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab-button:hover:not(.active) {
+  background-color: #dee2e6;
+  color: #333;
+}
+
+.output-container {
+  flex-grow: 1;
+  border: 2px solid #dee2e6;
+  border-radius: 15px;
+  min-height: 400px;
+}
+
+.output-box {
+  height: 100%;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.output-box h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: Calibri;
+}
+
+.output-content {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #333;
+  flex-grow: 1;
+}
+
+.output-content.empty {
+  color: #999;
+  font-style: italic;
+}
+
+.output-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid #333;
+  background-color: white;
+}
+
+.output-table td {
+  border: 2px solid #333;
+  height: 60px;
+  width: 25%;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1200px) {
+  .work-container {
     flex-direction: column;
-  }
-  .menu .menuTitle {
-    font-family: cursive;
-    font-size: 60px;
-  }
-  
-  .menuList {
-    width: 70vw;
     height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    place-items: center;
   }
   
-  /* MENU ITEM STYLING */
-  
-  .menuItem {
-    border-radius: 15px;
-    width: 300px;
-    height: 350px;
-    margin: 20px;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  }
-  .menuItem:hover {
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
-    transition: 0.3s ease-in;
-    cursor: pointer;
-  }
-  
-  .menuItem div {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+  .input-section,
+  .output-section {
     width: 100%;
+  }
+  
+  .input-section {
+    border-right: none;
+    border-bottom: 4px solid #ccc;
+  }
+  
+  .text-input {
     height: 200px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .WorkTitle {
+    font-size: 40px;
   }
   
-  .menuItem h1,
-  .menuItem p {
-    margin-left: 20px;
+  .input-section,
+  .output-section {
+    padding: 20px;
   }
   
-  @media only screen and (max-width: 1300px) {
-    .menuList {
-      grid-template-columns: 1fr 1fr;
-    }
+  .input-label {
+    font-size: 20px;
   }
   
-  @media only screen and (max-width: 800px) {
-    .menuList {
-      grid-template-columns: 1fr;
-    }
+  .text-input {
+    font-size: 16px;
+    height: 150px;
   }
+  
+  .copy-button {
+    font-size: 18px;
+    padding: 15px;
+  }
+  
+  .tab-button {
+    font-size: 16px;
+    padding: 12px 15px;
+  }
+  
+  .output-box h3 {
+    font-size: 20px;
+  }
+  
+  .output-content {
+    font-size: 18px;
+  }
+}

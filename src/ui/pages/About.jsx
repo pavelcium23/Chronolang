@@ -12,19 +12,17 @@ function About() {
       <div className="aboutBottom">
         <h1> ABOUT US</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-          mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-          voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-          fugiat iusto fuga praesentium optio, eaque rerum! Provident similique
-          accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut
-          molestias architecto voluptate aliquam nihil, eveniet aliquid culpa
-          officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum
-          nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque
-          error repudiandae fuga? Ipsa laudantium molestias eos sapiente
-          officiis modi at sunt excepturi expedita sint? Sed quibusdam
-          recusandae alias error harum maxime adipisci amet laborum.
-          Perspiciatis minima nesciunt dolorem! Officiis iure rerum voluptates a
-          cumque velit
+         Time-series data is critical in domains such as financial forecasting,
+          climate modeling, industrial automation, and IoT analytics. Existing tools
+          like Pandas, SQL, Apache Spark, and R's statistical libraries require verbose
+          scripts, complex syntax, and additional dependencies, making them difficult for
+         non-programmers to use. Furthermore, these tools often lack built-in support for
+         real-time streaming data and forecasting capabilities without integrating external 
+          machine learning libraries. This gap in usability and performance creates challenges 
+          for time-series analytics. ChronoLang is proposed as a domain-specific language (DSL)
+         designed to simplify time-series analytics, forecasting, and real-time data processing.
+         It aims to provide an intuitive, declarative syntax with built-in forecasting models and
+          real-time streaming support, addressing the limitations of traditional tools.
         </p>
       </div>
     </div>
