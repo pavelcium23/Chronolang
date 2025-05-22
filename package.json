@@ -10,7 +10,8 @@
     "dev": "vite dev",
     "electron:dev": "npm run build && electron .",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "package-win": "electron-packager . YourAppName --platform=win32 --arch=x64 --out=dist --overwrite"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -27,7 +28,9 @@
     "@types/react-dom": "^19.1.2",
     "@types/react-router-dom": "^5.3.3",
     "@vitejs/plugin-react": "^4.4.1",
-    "electron": "^36.2.0",
+    "electron": "^36.2.1",
+    "electron-builder": "^26.0.12",
+    "electron-packager": "^17.1.2",
     "eslint": "^9.25.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
